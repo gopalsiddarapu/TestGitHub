@@ -188,6 +188,63 @@ Normally exercise
 -->Execute push command ( git push -u origin master) 
 
 
+----------------------------------------------------
+
+25th october 2024 
+
+git remote -v  // to show remote repositories ( current remote repos pointing)
+git fetch --all ( to list the all remote repo branches)
+
+To detach from one branch to another branch use below command 
+git checkout origin/master  or git checkout origin/main  or git checkout -b branchname 
+
+git show HEAD ( it will show the current commit /latest commit of the repository ) 
+
+Issue : allow all unrelated histories  while merging two different branches 
+
+git merge branchname(master)  --allow-unrelated-histories 
+
+git pull --rebase ( to get commits of central repository into current branch in local ) 
+
+
+git branch --set-upstream-to=origin/master  ( this sets to upstream branch ) after this we don't need to use -u while pushing , we just can use git push only 
+
+
+---------------
+
+11th november 2024 
+
+git fetch --all
+git merge branchname 
+
+git log --oneline 
+
+--reverting already committed changes  for specific commit - id ----
+
+1)git revert commit-id , here one new commit id will be created for reverted changes 
+
+after that git push --run this 
+
+another way to delete commit-id 
+
+2)git reset --hard  commit-id( this commit id we should give to which to be pointed(previous commit-id) ) (some of the situations if revert commands doesn't work )
+git push --force
+
+3) reverting single file from the repository 
+git restore filename(hello.java)
+git push or git push --force 
+
+** ( git push --force is required when  our local commits are behind the remote repository ( it means some of other persons pushed changes before our commits to central or if the local git history is overwritten)
+** (git push  only required if local commits are up to date with central commits )
+
+
+
+git cherry-pick commit-id ( it works for specific commits instead of merging changes from one branch to another branch entires changes ,only specific commits to be merged in required branch )
+git push 
+
+
+
+
 
 
 
