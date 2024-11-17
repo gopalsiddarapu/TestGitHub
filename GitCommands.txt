@@ -246,6 +246,10 @@ git push
 17th Nov 2024
 #Github test change in intelliJ IDEA
 
+Global configuration (applies to all repositories)
+---------------------------------------------------
+git config --global user.name="YOur name"
+git config --global user.email="email@gmail.com"
 
 
 
